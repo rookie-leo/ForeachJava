@@ -1,0 +1,32 @@
+package arrays;
+
+public class ExercicioForeach {
+
+	public static void main(String[] args) {
+		
+		double notasAlunoA[] = new double[4];
+		
+		notasAlunoA[0] = 7.9;
+		notasAlunoA[1] = 8;
+		notasAlunoA[2] = 6.7;
+		notasAlunoA[3] = 9.7;
+		
+		
+		//exercitando o uso de FOREACH em java
+		double totalAlunoA = 0;//variavel para calcular o total da nota do aluno
+		for(double nota: notasAlunoA) {
+			totalAlunoA += nota;
+		}
+		System.out.println(totalAlunoA / notasAlunoA.length);//tirando a media do aluno
+
+		final double notaArmazenada = 5.9;//armazenando uma nota dentro de uma variavel
+		double notasAlunoB[] = {6.9, 8.9, notaArmazenada, 10};//construindo um array
+		double totalAlunoB = 0;
+		
+		for(double nota: notasAlunoB) {
+			totalAlunoB += nota;
+		}
+		System.out.printf("A nota do aluno B eh %.1f", totalAlunoB / notasAlunoB.length);
+	}
+	
+}
